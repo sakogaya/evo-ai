@@ -12,11 +12,11 @@ services:
       POSTGRES_CONNECTION_STRING: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/evo_ai
       REDIS_HOST: redis
       REDIS_PORT: ${REDIS_PORT:-6379}
-      REDIS_PASSWORD: ${REDIS_PASSWORD:-""}
+      REDIS_PASSWORD:supersecurepass123
       REDIS_SSL: "false"
       REDIS_KEY_PREFIX: "a2a:"
       REDIS_TTL: 3600
-      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      JWT_SECRET_KEY: supersecurepass123
       SENDGRID_API_KEY: ${SENDGRID_API_KEY}
       EMAIL_FROM: ${EMAIL_FROM}
       APP_URL: ${APP_URL}
