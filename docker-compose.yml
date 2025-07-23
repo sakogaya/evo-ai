@@ -81,6 +81,9 @@ services:
         limits:
           cpus: "0.5"
           memory: 500M
+labels:
+  - "traefik.http.services.api.loadbalancer.server.port=8800"
+
 
 volumes:
   postgres_data:
