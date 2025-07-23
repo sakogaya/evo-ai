@@ -7,7 +7,7 @@ services:
       - postgres
       - redis
     ports:
-      - "8000:8000"
+      - "8800:8000"
     environment:
       POSTGRES_CONNECTION_STRING: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/evo_ai
       REDIS_HOST: redis
@@ -26,7 +26,7 @@ services:
       - ./logs:/app/logs
       - ./static:/app/static
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      test: ["CMD", "curl", "-f", "https://bg.ai.taj.alminessa.com/"]
       interval: 30s
       timeout: 10s
       retries: 5
@@ -44,7 +44,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
       POSTGRES_DB: evo_ai
     ports:
-      - "${POSTGRES_PORT:-5432}:5432"
+      - "${POSTGRES_PORT:-55432}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -68,7 +68,7 @@ services:
       - --requirepass
       - "${REDIS_PASSWORD}"
     ports:
-      - "${REDIS_PORT:-6379}:6379"
+      - "${REDIS_PORT:-63791}:6379"
     volumes:
       - redis_data:/data
     healthcheck:
