@@ -12,7 +12,7 @@ services:
       POSTGRES_CONNECTION_STRING: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/evo_ai
       REDIS_HOST: redis
       REDIS_PORT: ${REDIS_PORT:-6379}
-      REDIS_PASSWORD:supersecurepass123
+      REDIS_PASSWORD: supersecurepass123
       REDIS_SSL: "false"
       REDIS_KEY_PREFIX: "a2a:"
       REDIS_TTL: 3600
