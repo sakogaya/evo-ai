@@ -8,9 +8,6 @@ services:
       - redis
     ports:
       - "8801:8800"
-
-   labels:
-  - "traefik.http.services.api.loadbalancer.server.port=8800"
     
     environment:
       POSTGRES_CONNECTION_STRING: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/evo_ai
