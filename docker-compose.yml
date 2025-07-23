@@ -7,7 +7,7 @@ services:
       - postgres
       - redis
     ports:
-      - "8800:8000"
+      - "8800:8800"
     environment:
       POSTGRES_CONNECTION_STRING: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/evo_ai
       REDIS_HOST: redis
